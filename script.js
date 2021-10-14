@@ -30,7 +30,7 @@ try {
         ctx.arc(x,y,5,0,2*Math.PI);
         ctx.fill();
         ctx.moveTo(x,y);
-        ctx.lineTo(x+Math.cos(deg2rad(theta)),y+Math.sin(deg2rad(theta)));
+        ctx.lineTo(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5);
     }
     function update() {
 
