@@ -7,9 +7,20 @@ try {
     let y=10;
     let theta=0;
 
+
+    function deg2rad(deg) {
+        return deg*(Math.PI/180);
+    }
+
     function fd(pix) {
-        x+=Math.cos(theta)*pix;
-        y+=Math.sin(theta)*pix;
+        x+=Math.cos(deg2rad(theta))*pix;
+        y+=Math.sin(deg2rad(theta))*pix;
+    }
+    function rt(deg) {
+        theta+=deg;
+    }
+    function lt(deg) {
+        theta-=deg;
     }
     
     function draw() {
