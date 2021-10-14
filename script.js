@@ -27,7 +27,10 @@ try {
         ctx.fillStyle="white";
         ctx.clearRect(0,0,100,100);
         ctx.fillStyle="red";
-        ctx.fillRect(x,y,10,10);
+        ctx.arc(x,y,5,0,2*Math.PI);
+        ctx.fill();
+        ctx.moveTo(x,y);
+        ctx.lineTo(x+Math.cos(deg2rad(theta)),y+Math.sin(deg2rad(theta)));
     }
     function update() {
 
