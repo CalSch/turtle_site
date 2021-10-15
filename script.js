@@ -30,12 +30,9 @@ try {
         ctx.arc(x,y,5,0,2*Math.PI);
         ctx.fill();
 
-        ctx.strokeStyle="2px black";
-        ctx.moveTo(x,y);
-        ctx.beginPath();
-        ctx.lineTo(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5);
-        ctx.closePath();
-        ctx.stroke();
+        ctx.fillStyle="blue";
+        ctx.arc(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5,5,0,2*Math.PI);
+        ctx.fill();
     }
     function update() {
 
