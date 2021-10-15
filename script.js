@@ -31,7 +31,7 @@ try {
         ctx.fill();
 
         ctx.fillStyle="blue";
-        ctx.arc(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5,5,0,2*Math.PI);
+        ctx.arc(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5,2,0,2*Math.PI);
         ctx.fill();
     }
     function update() {
