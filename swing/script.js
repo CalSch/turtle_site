@@ -6,8 +6,6 @@ try {
     let x=10;
     let y=10;
     let theta=0;
-    let pen_down=true;
-    let points=[];
 
 
     function deg2rad(deg) {
@@ -15,7 +13,6 @@ try {
     }
 
     function fd(pix) {
-        if (pen_down) points.push({x,y});
         x+=Math.cos(deg2rad(theta))*pix;
         y+=Math.sin(deg2rad(theta))*pix;
     }
@@ -35,20 +32,11 @@ try {
         ctx.arc(x,y,5,0,2*Math.PI);
         ctx.fill();
         ctx.closePath();
+
         ctx.fillStyle="blue";
         ctx.beginPath();
         ctx.arc(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5,2,0,2*Math.PI);
         ctx.fill();
-        ctx.closePath();
-
-        ctx.strokeStyle="black";
-        ctx.lineWidth=2;
-        ctx.beginPath();
-        ctx.moveTo(10,10);
-        points.forEach(function(p){
-            ctx.lineTo(p.x,p.y)
-        });
-        ctx.stroke();
         ctx.closePath();
     }
     function update() {
