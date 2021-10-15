@@ -26,13 +26,18 @@ try {
     function draw() {
         ctx.fillStyle="white";
         ctx.clearRect(0,0,500,500);
+
         ctx.fillStyle="red";
+        ctx.beginPath();
         ctx.arc(x,y,5,0,2*Math.PI);
         ctx.fill();
+        ctx.closePath();
 
         ctx.fillStyle="blue";
+        ctx.beginPath();
         ctx.arc(x+Math.cos(deg2rad(theta))*5,y+Math.sin(deg2rad(theta))*5,2,0,2*Math.PI);
         ctx.fill();
+        ctx.closePath();
     }
     function update() {
 
